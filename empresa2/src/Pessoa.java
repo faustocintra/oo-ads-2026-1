@@ -24,12 +24,12 @@ public class Pessoa {
 
     public String exibirDados() {
         // \n significa quebra de linha
-        return  "Nome:" + this.nome +
-                "\nIdade:" + this.idade +
-                "\nCPF:" + this.cpf +
-                "\nTelefone:" + this.telefone;
+        return  "Nome: " + this.nome +
+                "\nIdade: " + this.idade +
+                "\nCPF: " + this.cpf +
+                "\nTelefone: " + this.telefone;
 
     }
-
 }
+
 
