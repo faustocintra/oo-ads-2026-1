@@ -18,16 +18,16 @@ public class pessoa {
     }
 
     public void atualizarEmail(String novoEmail){
-        this.email = novoEmail
+        this.email = novoEmail;
                 System.out.println("Email atualizado para: " + this.email);
     }
 
     public String exibirDados() {
         // n significa quebra de linha
-        return "Nome:" + this.nome +
-                "\nIdade:" + this.idade  +
-                "\nCPF:" + this.cpf +
-                "\nE-mail:" + this.email +
-                "\nTelefone:" + this.telefone;
+        return "Nome: " + this.nome +
+                "\nIdade: " + this.idade  +
+                "\nCPF: " + this.cpf +
+                "\nE-mail: " + this.email +
+                "\nTelefone: " + this.telefone;
     }
 }
