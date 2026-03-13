@@ -2,6 +2,13 @@ import java.util.Date;
 
 public class Funcionario extends Pessoa{
 
+    /* taxaComissao é um ATRUBUTO DE CLASSE.
+    O valor de um atributo  de classe é COMPARTILHADO por
+    todos os objetos criados a partir da classe que o definiu.
+    A declaração de atributos de classe é caracterizado pela
+    uso da palavra-chave "static".
+    */
+
     public static Double taxaComissao = 10.0; // 10%
 
     // Atributos
@@ -33,6 +40,22 @@ public void aumentarSalarioBase(Double percentual) {
 
     @Override
     public String exibirDados() {
+
+        /*
+            A palavra-chave "super" é uma referência a classe-base
+            (Pessoa) da classe atual (Funcionário).
+
+            Em vez de reescrever o método exibirDados() do zero,
+            chamamos a versão do método implementado na classe
+            Pessoa, usando a referência "super" (super.exibirDados());
+            e, em seguida, apenas completamos com as informações que
+            são particulares de Funcionário.
+
+            Quando uma classe redefine (reescreve) um método de sua
+            classe-base, como nesse caso, a versão reescrita na classe
+            derivada deve ser marcada com @Override.
+         */
+
         String dadosPessoa = super.exibirDados();
         return dadosPessoa +
                 "\nMatrícula: " + this.matricula +
