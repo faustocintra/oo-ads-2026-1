@@ -40,7 +40,7 @@ public class Funcionario extends Pessoa {
             do método implementado na classe Pessoa, usando a referência "super"(super.exibirDados();)
             e, em seguida, apenas completamos com as informações que
             são particulares de Funcionário.
-            Quando uma classe redefine(reescreve) um método de uma
+            Quando uma classe redefine(reescreve) um método de uma a
         */
         String dadosPessoa = super.exibirDados();
         return dadosPessoa +

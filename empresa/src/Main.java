@@ -79,7 +79,7 @@ public class Main {
         System.out.println("-".repeat(80));
 
         // Calculando o salário de Veneranda
-        Double salarioFinal = func1.calcularSalario();
+        double salarioFinal = func1.calcularSalario();
         System.out.println("O salário final de Veneranda é R$ " + salarioFinal);
     }
 }
