@@ -5,18 +5,25 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         teste01();
+        teste02();
     }
 
     public static void teste01() {
         // Criação do primeiro objeto de pessoa
-        Pessoa pessoa1 = new Pessoa();
+        Pessoa pessoa1 = new Pessoa(
+                "Gervásio Gomes Garcia",
+                54,
+                "123.456.789-01",
+                "gervasio.garcia@empresa.com.br",
+                "(16) 98765-4321"
+        );
 
         // Atribuindo valores aos atributos
-        pessoa1.nome = "Gervásio Gomes Garcia";
-        pessoa1.idade = 54;
-        pessoa1.cpf = "123.456.789-01";
-        pessoa1.email = "gervasio.garcia@empresa.com.br";
-        pessoa1.telefone = "(16) 98765-4321";
+//        pessoa1.nome = "Gervásio Gomes Garcia";
+//        pessoa1.idade = 54;
+//        pessoa1.cpf = "123.456.789-01";
+//        pessoa1.email = "gervasio.garcia@empresa.com.br";
+//        pessoa1.telefone = "(16) 98765-4321";
 
         // Chamando o método para exibir os dados da pessoa 1
         System.out.println(pessoa1.exibirDados());
@@ -50,7 +57,17 @@ public class Main {
         System.out.println("*".repeat(80));
 
         // Vamos criar o primeiro objeto da classe Funcionario
-        Funcionario func1 = new Funcionario();
+        Funcionario func1 = new Funcionario(
+                nome: "Venerando Vieira",
+                idade: 26,
+                cpf: "987.654.321-01",
+                email: "veneranda@empresa.com.br",
+                telefone: "(16) 91234-5678",
+                matricula: "F0123",
+                cargo: "Assistente Financeiro",
+                salarioBase: 3500.00,
+                departamento: "Gerência Financeira"
+        );
 
         // Dando valor aos atributos do funcionário
         // (inclui atributos herdados de Pessoa)
@@ -81,5 +98,18 @@ public class Main {
         // Calculando o salário de Veneranda
         Double salarioFinal = func1.calcularSalario();
         System.out.println("O salário final de Veneranda é R$ " + salarioFinal);
+    }
+
+    public static void teste02() {
+
+        System.out.println("%".repeat(80));
+
+        Pessoa p = new Pessoa();
+        System.out.println("Exibindo dados de uma pessoa...");
+        System.out.println(p.exibirDados());
+
+        Funcionario f = new Funcionario();
+        System.out.println("Exibindo dados de um funcionário...");
+        System.out.println(f.exibirDados());
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
 
     /* taxaComissao é um ATRUBUTO DE CLASSE.
     O valor de um atributo  de classe é COMPARTILHADO por
@@ -18,9 +18,30 @@ public class Funcionario extends Pessoa{
     public String departamento;
     public Date dataAdmissao;
 
-    // Métodos
+    // MÉTODO CONSTRUTOR PERSONALIZADO
+    public Funcionario(
+            String nome,
+            Integer idade,
+            String cpf,
+            String email,
+            String telefone,
+            String matricula,
+            String cargo,
+            Double salarioBase,
+            String departamento
+    ) {
+        // Chamando o construtor da classe pai
+        super(nome, idade, cpf, email, telefone);
+
+        // Armazenando o valor dos atributos particulares da classe Funcionário
+        this.matricula = matricula;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.departamento = departamento;
+        this.dataAdmissao = new Date();
+    }
     public Double calcularSalario() {
-        return this.salarioBase * (1 + taxaComissao / 100));
+        return this.salarioBase * (1 + taxaComissao / 100);
 }
 
 public void aumentarSalarioBase(Double percentual) {
