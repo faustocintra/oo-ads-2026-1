@@ -14,6 +14,30 @@ public class Funcionario extends Pessoa {
     public Double salarioBase;
     public String departamento;
     public Date dataAdmissao;
+
+    //MÉTODO CONSTRUTOR PERSONALIZADO
+    public Funcionario(
+            String nome,
+            Integer idade,
+            String cpf,
+            String email,
+            String telefone,
+            String matricula,
+            String cargo,
+            Double salarioBase,
+            String departamento
+    ) {
+        // chamando o construtor da classe pai
+        super(nome, idade, cpf, email, telefone);
+
+        //Armmazenando o valor dos atibutos particulares da classe Funcionario
+        this.matricula = matricula;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.departamento = departamento;
+        this.dataAdmissao = new Date();
+    }
+
     // Métodos
     public Double calcularSalario() {
         return this.salarioBase * (1 + (taxaComissao / 100));
