@@ -11,6 +11,28 @@ public class funcionario extends pessoa {
     public String departamento;
     public Date dataAdmissao;
 
+    // MÉTODO CONSTRUTOR PERSONALIZADO
+    public funcionario(
+            String nome,
+            Integer idade,
+            String cpf,
+            String email,
+            String telefone,
+            String matricula,
+            String cargo,
+            Double salarioBase,
+            String departamento
+    ) {
+        // Chamando o construtor da classe pai
+        super(nome, idade, cpf, email, telefone);
+
+        // Armazenando o valor dos atributos particulares da classe funcionario
+        this.matricula = matricula;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.departamento = departamento;
+        this.dataAdmissao = new Date();
+    }
     //Métodos
     public Double calcularSalario(){
         return this.salarioBase * (1 + taxaComissao);
