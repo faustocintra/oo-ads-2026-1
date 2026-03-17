@@ -14,6 +14,29 @@ public class Funcionario extends Pessoa {
    public Double salarioBase;
    public String departamento;
    public Date dataAdmissao;
+    // Método construtor
+    public Funcionario(
+              String nome,
+              Integer idade,
+              String cpf,
+              String email,
+              String telefone,
+              String matricula,
+              String cargo,
+              Double salarioBase,
+              String departamento,
+              Date dataAdmissao
+
+    ) {
+        // Chamando o construtor da classe pai (Pessoa) para inicializar os atributos herdados
+        super(nome, idade, cpf, email, telefone);
+        //Armazenando os valores dos atributos específicos de Funcionario
+        this.matricula = matricula;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.departamento = departamento;
+        this.dataAdmissao = new Date();
+    }
 
 
    // Métodos
