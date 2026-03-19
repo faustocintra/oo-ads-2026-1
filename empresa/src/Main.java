@@ -58,15 +58,15 @@ public class Main {
 
         // Vamos criar o primeiro objeto da classe Funcionario
         Funcionario func1 = new Funcionario(
-                nome: "Veneranda Vieira",
-                idade: 26,
-                cpf: "987.654.321-09"
-                email: "veneranda@empresa.com.br",
-                telefone: "(36) 912345-6789"
-                matricula: "F0123",
-                cargo: "Assistente Financeiro",
-                SalarioBAse: 3500.00,
-                departamente: "Gerência Financeira"
+                "Veneranda Vieira",
+                26,
+                "987.654.321-09",
+                "veneranda@empresa.com.br",
+                "(34) 912345-6789",
+                "F0123",
+                "Assistente Financeiro",
+                 s3500.00,
+                 "Gerência Financeira"
         );
 
         // Dando valor aos atributos do funcionário

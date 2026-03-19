@@ -11,13 +11,13 @@ public class Pessoa {
     MÉTODO CONSTRUTOR
     O método construtor é sempre chamdo se  crio um novo objeto
     a partir da classe.
-    Nele,  podemos exigir que detreminados valores sejam informados para
+    Nele,  podemos exigir que determinados valores sejam informados para
     que a existência do objeto seja possível.
     o método construtor SEMPRE tem o MESMO NOME DA CLASSE.
     */
-    public Pessoa(3 related problems
+    public Pessoa(2 usages new  = 3 related problems
                    String nome,
-                   Interager idade,
+                   Integer idade,
                    String cpf,
                    String email,
                    String telefone

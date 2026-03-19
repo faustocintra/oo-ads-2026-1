@@ -21,22 +21,22 @@ public class Funcionario extends Pessoa {
     // MÉTODO CONSTRUTOR PERSONALIZADO
     public Funcionario(
             String nome,
-            Interger idade,
+            Integer idade,
             String cpf,
             String email,
             String telefone,
-            String.matricula,
-            String.cargo,
-            Double.SalarioBAse,
-            String.departamento
+            String matricula,
+            String cargo,
+            Double SalarioBAse,
+            String departamento
     ) {
         // Chamando o construtor da classe pai
-        super(nome, idade, cpf, email, telefone);
+        super(nome,idade, cpf, email, telefone);
 
         // Armazenar o valor dos atibutos particulares da classe Funcionário
         this.matricula = matricula;
         this.cargo = cargo;
-        this.SalarioBAse = salararioBase
+        this.SalarioBAse = salararioBase;
         this.departamento = departamento;
         this.dataAdmissao = new Date();
     }
