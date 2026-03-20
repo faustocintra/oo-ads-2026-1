@@ -4,8 +4,10 @@ import java.util.Date;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        teste01();
-        teste02();
+        //teste01();
+        //teste02();
+        //teste03();
+        prova1();
     }
 
     public static void teste01() {
@@ -111,5 +113,96 @@ public class Main {
 //        Funcionario f = new Funcionario();
 //        System.out.println("Exibindo dados de um funcionário...");
 //        System.out.println(f.exibirDados());
+    }
+
+    public static void teste03() {
+        System.out.println("=== TESTE CONTAS BANCÁRIAS COMUNS ===");
+        // Criando 3 contas (informando titular e saldo no ato da criação)
+        ContaBancaria c1 = new ContaBancaria("Gervásio", 1000.0);
+        ContaBancaria c2 = new ContaBancaria("Veneranda", 2500.0);
+        ContaBancaria c3 = new ContaBancaria("Leonardo", 500.0);
+
+        c1.depositar(200.0);
+        c2.sacar(500.0);
+        c3.sacar(100.0);
+        System.out.println("-".repeat(80));
+        c1.exibirSaldo();
+        System.out.println("-".repeat(80));
+        c2.exibirSaldo();
+        System.out.println("-".repeat(80));
+        c3.exibirSaldo();
+
+        System.out.println("\n=== TESTE CONTAS ESPECIAIS ===");
+        // Criando 3 contas especiais (titular, saldo, limite)
+        ContaEspecial ce1 = new ContaEspecial("Gervásio Especial", 1000.0, 500.0);
+        ContaEspecial ce2 = new ContaEspecial("Veneranda Especial", 2000.0, 1000.0);
+        ContaEspecial ce3 = new ContaEspecial("Leonardo Especial", 0.0, 2000.0);
+
+        ce1.depositar(300.0);
+        ce2.sacar(100.0);
+        ce3.depositar(500.0);
+
+        // Exibindo saldos (Real e com Limite)
+        ce1.exibirSaldo();
+        ce1.exibirSaldoReal();
+        System.out.println("-".repeat(80));
+        ce2.exibirSaldo();
+        ce2.exibirSaldoReal();
+        System.out.println("-".repeat(80));
+        ce3.exibirSaldo();
+        ce3.exibirSaldoReal();
+    }
+    public static void prova1() {
+        System.out.println("=== PROVA 1 ===");
+
+        // --- ALUNO 01 ---
+        Estudante aluno1 = new Estudante("Análise e Desenvolvimento de sistemas");
+        aluno1.nome = "Jaspion da Silva";
+        aluno1.idade = 20;
+        aluno1.cpf = "999.444.855-55";
+        aluno1.email = "jaspionBrasileiro@gmail.com";
+        aluno1.telefone = "(16) 97111-5522";
+        aluno1.nota1 = 8.5;
+        aluno1.nota2 = 9.0;
+        System.out.println(aluno1.exibirDados());
+
+        System.out.println("-".repeat(80));
+
+
+        Estudante aluno2 = new Estudante("Gestão da produção industrial");
+        aluno2.nome = "Carlos Magno ";
+        aluno2.idade = 22;
+        aluno2.cpf = "333.444.855-55";
+        aluno2.email = "CarlosMagnoDaFrança@gmail.com";
+        aluno2.telefone = "(16) 91111-5522";
+        aluno2.nota1 = 5.0;
+        aluno2.nota2 = 6.0;
+        System.out.println(aluno2.exibirDados());
+
+        System.out.println("-".repeat(80));
+
+        Estudante aluno3 = new Estudante("Direito");
+        aluno3.nome = "Ragnar Lothbrook";
+        aluno3.idade = 19;
+        aluno3.cpf = "222.333.444-55";
+        aluno3.email = "RagnarInvasorNordico@gmail.com";
+        aluno3.telefone = "(16) 91111-2222";
+        aluno3.nota1 = 7.5;
+        aluno3.nota2 = 4.0;
+        System.out.println(aluno3.exibirDados());
+        System.out.println("-".repeat(80));
+
+        Estudante aluno4 = new Estudante("Analise e Desenvolvimento de Sistemas");
+        aluno4.nome = "Leonardo Lopes dos Santos";
+        aluno4.idade = 29;
+        aluno4.cpf = "111.222.444-55";
+        aluno4.email = "leleonardolopes@gmail.com";
+        aluno4.telefone = "(16) 99366-1739";
+        aluno4.nota1 = 10.0;
+        aluno4.nota2 = 9.5;
+
+        System.out.println(aluno4.exibirDados());
+
+        System.out.println("=".repeat(80));
     }
 }
