@@ -11,11 +11,12 @@ public class Main {
     public static void teste01() {
         // Criação do primeiro objeto de pessoa
         Pessoa pessoa1 = new Pessoa(
-                nome = "Gervásio Gomes Garcia",
+                "Gervásio Gomes Garcia",
                 54,
                 "123.456.789-01",
                 "gervasio.garcia@empresa.com.br",
                 "(16) 98765-4321"
+
         );
 
         // Atribuindo valores aos atributos
@@ -65,7 +66,7 @@ public class Main {
                 "(34) 912345-6789",
                 "F0123",
                 "Assistente Financeiro",
-                 s3500.00,
+                3500.00,
                  "Gerência Financeira"
         );
 
@@ -112,4 +113,42 @@ public class Main {
 //        System.out.println("Exibindo dados de um funcionário...");
 //        System.out.println(f.exibirDados());
     }
+//    public class Main {
+//        public static void main(String[] args) {
+            // Criando o objeto da conta
+            ContaBancaria minhaConta = new ContaBancaria();
+
+            // Definindo o dono da conta
+            minhaConta.nome = "Ana Silva (Psicóloga)";
+        }
+       public class Main {
+       public static void main(String[] args) {
+                 teste01();
+                 teste02();
+                 teste03();
+
+
+            public static void teste03() {
+                // Criando 3 contas diferentes
+                ContaBancaria conta1 = new ContaBancaria("Dra. Ana (Psicóloga)", 1000.0);
+                ContaBancaria conta2 = new ContaBancaria("Paciente João", 50.0);
+                ContaEspecial conta3 = new ContaEspecial("Clínica Central", 5000.0, 2000.0);
+
+                // Movimentações
+                conta1.depositar(150.0); // Recebeu de uma consulta
+                conta2.sacar(20.0);      // Pagou algo
+                conta3.sacar(1000.0);    // Pagamento de aluguel
+
+                // Exibindo saldos finais
+                System.out.println("--- RESULTADOS FINAIS ---");
+                conta1.exibirSaldo();
+                conta2.exibirSaldo();
+                conta3.exibirSaldo(); // Aqui o @Override vai somar o limite automaticamente
+
+
+
 }
+
+        void main() {
+        }
+

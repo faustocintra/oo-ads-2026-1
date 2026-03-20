@@ -27,16 +27,16 @@ public class Funcionario extends Pessoa {
             String telefone,
             String matricula,
             String cargo,
-            Double SalarioBAse,
+            Double SalarioBase,
             String departamento
     ) {
         // Chamando o construtor da classe pai
-        super(nome,idade, cpf, email, telefone);
+        super(nome, idade, cpf, email, telefone);
 
         // Armazenar o valor dos atibutos particulares da classe Funcionário
         this.matricula = matricula;
         this.cargo = cargo;
-        this.SalarioBAse = salararioBase;
+        this.salarioBase = salarioBase;
         this.departamento = departamento;
         this.dataAdmissao = new Date();
     }
