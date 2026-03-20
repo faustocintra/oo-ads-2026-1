@@ -4,8 +4,9 @@ import java.util.Date;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        teste01();
-        teste02();
+        //teste01();
+        //teste02();
+        teste03();
     }
 
     public static void teste01() {
@@ -111,5 +112,43 @@ public class Main {
 //        Funcionario f = new Funcionario();
 //        System.out.println("Exibindo dados de um funcionário...");
 //        System.out.println(f.exibirDados());
+    }
+
+    public static void teste03() {
+        System.out.println("=== TESTE CONTAS BANCÁRIAS COMUNS ===");
+        // Criando 3 contas (informando titular e saldo no ato da criação)
+        ContaBancaria c1 = new ContaBancaria("Gervásio", 1000.0);
+        ContaBancaria c2 = new ContaBancaria("Veneranda", 2500.0);
+        ContaBancaria c3 = new ContaBancaria("Leonardo", 500.0);
+
+        c1.depositar(200.0);
+        c2.sacar(500.0);
+        c3.sacar(100.0);
+        System.out.println("-".repeat(80));
+        c1.exibirSaldo();
+        System.out.println("-".repeat(80));
+        c2.exibirSaldo();
+        System.out.println("-".repeat(80));
+        c3.exibirSaldo();
+
+        System.out.println("\n=== TESTE CONTAS ESPECIAIS ===");
+        // Criando 3 contas especiais (titular, saldo, limite)
+        ContaEspecial ce1 = new ContaEspecial("Gervásio Especial", 1000.0, 500.0);
+        ContaEspecial ce2 = new ContaEspecial("Veneranda Especial", 2000.0, 1000.0);
+        ContaEspecial ce3 = new ContaEspecial("Leonardo Especial", 0.0, 2000.0);
+
+        ce1.depositar(300.0);
+        ce2.sacar(100.0);
+        ce3.depositar(500.0);
+
+        // Exibindo saldos (Real e com Limite)
+        ce1.exibirSaldo();
+        ce1.exibirSaldoReal();
+        System.out.println("-".repeat(80));
+        ce2.exibirSaldo();
+        ce2.exibirSaldoReal();
+        System.out.println("-".repeat(80));
+        ce3.exibirSaldo();
+        ce3.exibirSaldoReal();
     }
 }
