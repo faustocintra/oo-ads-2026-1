@@ -9,8 +9,15 @@ public class Funcionario extends Pessoa {
     public String departamento;
     public Date dataAdmissao;
 
-    public Funcionario(String nome, Integer idade, String cpf, String email, String telefone,
-                       String matricula, String cargo, Double salarioBase, String departamento) {
+    public Funcionario(String nome,
+                       Integer idade,
+                       String cpf,
+                       String email,
+                       String telefone,
+                       String matricula,
+                       String cargo,
+                       Double salarioBase,
+                       String departamento) {
         super(nome, idade, cpf, email, telefone);
         this.matricula = matricula;
         this.cargo = cargo;
