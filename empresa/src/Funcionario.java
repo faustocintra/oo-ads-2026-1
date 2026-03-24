@@ -18,6 +18,7 @@ public class Funcionario extends Pessoa {
                        String cargo,
                        Double salarioBase,
                        String departamento) {
+
         super(nome, idade, cpf, email, telefone);
         this.matricula = matricula;
         this.cargo = cargo;
