@@ -1,50 +1,27 @@
 public class Pessoa {
-
     // Atributos
-    public class Pessoa {
+    public String nome;
+    public Integer idade;
+    public String cpf;
+    public String email;
+    public String telefone;
 
-        // Atributos
-        public String nome;
-        public Integer idade;
-        public String cpf;
-        public String email;
-        public String telefone;
-
-        /*
-    MÉTODO CONSTRUTOR
-    O método construtor é sempre chamado quando criamos um novo objeto.
-    Ele tem o MESMO nome da classe.
-    */
-    public Pessoa(
-            String nome,
-            Integer idade,
-            String cpf,
-            String email,
-            String telefone
-    ){
+    // Construtor Personalizado
+    public Pessoa(String nome, Integer idade, String cpf, String email, String telefone) {
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
     }
-    /*
-    MÉTODO CONSTRUTOR
-    O método construtor é sempre chamado se  crio um novo objeto
-    a partir da classe.
-    Nele,  podemos exigir que determinados valores sejam informados para
-    que a existência do objeto seja possível.
-    o método construtor SEMPRE tem o MESMO NOME DA CLASSE.
-    */
-
-
 
     // Métodos
     public void apresentar() {
         System.out.println("Olá, meu nome é " + this.nome + " e tenho " + this.idade + " anos.");
     }
+
     public void fazerAniversario() {
-        this.idade++;   // Incrementa a idade
+        this.idade++;
         System.out.println("Feliz aniversário, " + this.nome + "! Agora você tem " + this.idade + " anos.");
     }
 
@@ -54,12 +31,10 @@ public class Pessoa {
     }
 
     public String exibirDados() {
-        // \n significa quebra de linha
         return "Nome: " + this.nome +
                 "\nIdade: " + this.idade +
                 "\nCPF: " + this.cpf +
                 "\nE-mail: " + this.email +
                 "\nTelefone: " + this.telefone;
-
     }
 }

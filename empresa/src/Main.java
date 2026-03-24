@@ -1,154 +1,63 @@
-import java.util.Date;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
     public static void main(String[] args) {
+        // Chamando os testes organizadamente
         teste01();
-        teste02();
+        // teste02(); // Se você quiser usar depois
+        teste03();
     }
 
     public static void teste01() {
-        // Criação do primeiro objeto de pessoa
+        System.out.println("=== TESTE 01: Pessoa e Funcionário ===\n");
+
         Pessoa pessoa1 = new Pessoa(
                 "Gervásio Gomes Garcia",
                 54,
                 "123.456.789-01",
-                "gervasio.garcia@empresa.com.br",
-                "(16) 98765-4321"
-
-        );
-
-        // Atribuindo valores aos atributos
-//        pessoa1.nome = "Gervásio Gomes Garcia";
-//        pessoa1.idade = 54;
-//        pessoa1.cpf = "123.456.789-01";
-//        pessoa1.email = "gervasio.garcia@empresa.com.br";
-//        pessoa1.telefone = "(16) 98765-4321";
-
-        // Chamando o método para exibir os dados da pessoa 1
+                "gervasio@email.com",
+                "(16) 98765-4321");
         System.out.println(pessoa1.exibirDados());
-
-        System.out.println("-".repeat(80));  // Traço separador
-
         pessoa1.fazerAniversario();
+        System.out.println("-".repeat(30));
 
-        // Chamando a apresentação da pessoa, que reflete a nova idade
-        pessoa1.apresentar();
-
-        System.out.println("-".repeat(80));  // Traço separador
-
-        // Atualizando o e-mail
-        pessoa1.atualizarEmail("ggarcia@outlook.com");
-
-        System.out.println("-".repeat(80));  // Traço separador
-
-        // Exibindo novamente os dados para conferir as alterações feitas
-        System.out.println(pessoa1.exibirDados());
-
-        // Alterando novamente o e-mail por meio de manipulação direta
-        // do valor do atributo
-        pessoa1.email = "garcia.gervasio@bol.com.br";
-
-        System.out.println("-".repeat(80));  // Traço separador
-
-        // Exibindo novamente os dados para conferir as alterações feitas
-        System.out.println(pessoa1.exibirDados());
-
-        System.out.println("*".repeat(80));
-
-        // Vamos criar o primeiro objeto da classe Funcionario
         Funcionario func1 = new Funcionario(
                 "Veneranda Vieira",
                 26,
                 "987.654.321-09",
-                "veneranda@empresa.com.br",
-                "(34) 912345-6789",
+                "veneranda@empresa.com",
+                "(34) 91234-5678",
                 "F0123",
-                "Assistente Financeiro",
-                3500.00,
-                 "Gerência Financeira"
-        );
-
-        // Dando valor aos atributos do funcionário
-        // (inclui atributos herdados de Pessoa)
-//        func1.nome = "Veneranda Vieira";
-//        func1.idade = 26;
-//        func1.cpf = "987.654.321-09";
-//        func1.email = "veneranda@empresa.com.br";
-//        func1.telefone = "(36) 91234-5678";
-//        //----//
-//        func1.matricula = "F0123";
-//        func1.cargo = "Assistente Financeiro";
-//        func1.salarioBase = 3500.00;
-//        func1.departamento = "Gerência Financeira";
-//        func1.dataAdmissao = new Date();
-
-        // Exibindo os dados do funcionário
+                "Assistente",
+                3500.0,
+                "Financeiro");
         System.out.println(func1.exibirDados());
-
-        System.out.println("-".repeat(80));
-
-        func1.fazerAniversario();
-
-        // Exibindo os dados novamente para verificar mudança de idade
-        System.out.println(func1.exibirDados());
-
-        System.out.println("-".repeat(80));
-
-        // Calculando o salário de Veneranda
-        Double salarioFinal = func1.calcularSalario();
-        System.out.println("O salário final de Veneranda é R$ " + salarioFinal);
+        System.out.println("Salário com comissão: R$ " + func1.calcularSalario());
+        System.out.println("=".repeat(50) + "\n");
     }
 
-    public static void teste02() {
+    public static void teste03() {
+        System.out.println("=== TESTE 03: Contas Bancárias ===\n");
 
-//        System.out.println("%".repeat(80));
-//
-//        Pessoa p = new Pessoa();
-//        System.out.println("Exibindo dados de uma pessoa...");
-//        System.out.println(p.exibirDados());
-//
-//        Funcionario f = new Funcionario();
-//        System.out.println("Exibindo dados de um funcionário...");
-//        System.out.println(f.exibirDados());
+        // 1. Criando as contas (Cada uma na sua variável correta)
+        ContaBancaria conta1 = new ContaBancaria("Dra. Ana (Psicóloga)", 1000.0);
+        ContaBancaria conta2 = new ContaBancaria("Paciente João", 50.0);
+
+        // Usamos ContaEspecial aqui para o Java liberar o limite
+        ContaEspecial conta3 = new ContaEspecial("Clínica Central", 5000.0, 2000.0);
+
+        // 2. Movimentações
+        conta1.depositar(150.0);
+        conta2.sacar(20.0);
+
+        // Agora funciona porque a conta3 foi declarada como ContaEspecial
+        conta3.sacar(1000.0);
+
+        // 3. Exibição dos Resultados
+        System.out.println("--- RESULTADOS FINAIS ---");
+        conta1.exibirSaldo();
+        conta2.exibirSaldo();
+        conta3.exibirSaldo(); // Vai mostrar Saldo + Limite (se você fez o @Override na classe)
+
+        System.out.println("=".repeat(50));
     }
-//    public class Main {
-//        public static void main(String[] args) {
-            // Criando o objeto da conta
-            ContaBancaria minhaConta = new ContaBancaria();
-
-            // Definindo o dono da conta
-            minhaConta.nome = "Ana Silva (Psicóloga)";
-        }
-       public class Main {
-       public static void main(String[] args) {
-                 teste01();
-                 teste02();
-                 teste03();
-
-
-            public static void teste03() {
-                // Criando 3 contas diferentes
-                ContaBancaria conta1 = new ContaBancaria("Dra. Ana (Psicóloga)", 1000.0);
-                ContaBancaria conta2 = new ContaBancaria("Paciente João", 50.0);
-                ContaEspecial conta3 = new ContaEspecial("Clínica Central", 5000.0, 2000.0);
-
-                // Movimentações
-                conta1.depositar(150.0); // Recebeu de uma consulta
-                conta2.sacar(20.0);      // Pagou algo
-                conta3.sacar(1000.0);    // Pagamento de aluguel
-
-                // Exibindo saldos finais
-                System.out.println("--- RESULTADOS FINAIS ---");
-                conta1.exibirSaldo();
-                conta2.exibirSaldo();
-                conta3.exibirSaldo(); // Aqui o @Override vai somar o limite automaticamente
-
-
-
 }
-
-        void main() {
-        }
-
