@@ -8,13 +8,13 @@ public class Pessoa {
     public String telefone;
 
     /*
-    MÉTODO CONSTRUTOR
-    O método construtor  é sempre chamado quando se cria um novo objeto
-    a partir da classe.
-    Nele, podemos exigir que determinados valores sejam informados para
-    que a existência do objeto seja possível.
-    O método construtor SEMPRE tem o MESMO NOME DA CLASSE.
-     */
+        MÉTODO CONSTRUTOR
+        O método construtor é sempre chamado quando se cria um novo objeto
+        a partir da classe.
+        Nele, podemos exigir que determinados valores sejam informados para
+        que a existência do objeto seja possível.
+        O método construtor SEMPRE tem o MESMO NOME DA CLASSE.
+    */
     public Pessoa(
             String nome,
             Integer idade,
@@ -28,13 +28,15 @@ public class Pessoa {
         this.email = email;
         this.telefone = telefone;
     }
+
+    // Métodos
     public void apresentar() {
-        System.out.println("Olá! Meu nome é " + this.nome + " e tenho " + this.nome + "anos.");
+        System.out.println("Olá, meu nome é " + this.nome + " e tenho " + this.idade + " anos.");
     }
 
     public void fazerAniversario() {
-        this.idade++; // Incremento a idade
-        System.out.println("Feliz aniversário, " + this.nome + "! Agora você tem " + this.nome + "anos.");
+        this.idade++;   // Incrementa a idade
+        System.out.println("Feliz aniversário, " + this.nome + "! Agora você tem " + this.idade + " anos.");
     }
 
     public void atualizarEmail(String novoEmail) {
@@ -44,12 +46,10 @@ public class Pessoa {
 
     public String exibirDados() {
         // \n significa quebra de linha
-        return  "Nome: " + this.nome +
+        return "Nome: " + this.nome +
                 "\nIdade: " + this.idade +
                 "\nCPF: " + this.cpf +
+                "\nE-mail: " + this.email +
                 "\nTelefone: " + this.telefone;
-
     }
 }
-
-

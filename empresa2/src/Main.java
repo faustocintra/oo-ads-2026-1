@@ -1,3 +1,4 @@
+
 import java.util.Date;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -6,10 +7,12 @@ public class Main {
     public static void main(String[] args) {
         teste01();
         teste02();
+        teste03();
     }
 
     public static void teste01() {
         // Criação do primeiro objeto de pessoa
+        //Pessoa pessoa1 = new Pessoa();
         Pessoa pessoa1 = new Pessoa(
                 "Gervásio Gomes Garcia",
                 54,
@@ -19,6 +22,11 @@ public class Main {
         );
 
         // Atribuindo valores aos atributos
+        pessoa1.nome = "Gervásio Gomes Garcia";
+        pessoa1.idade = 54;
+        pessoa1.cpf = "123.456.789-01";
+        pessoa1.email = "gervasio.garcia@empresa.com.br";
+        pessoa1.telefone = "(16) 98765-4321";
 //        pessoa1.nome = "Gervásio Gomes Garcia";
 //        pessoa1.idade = 54;
 //        pessoa1.cpf = "123.456.789-01";
@@ -57,12 +65,13 @@ public class Main {
         System.out.println("*".repeat(80));
 
         // Vamos criar o primeiro objeto da classe Funcionario
+        //Funcionario func1 = new Funcionario();
         Funcionario func1 = new Funcionario(
-                "Venerando Vieira",
+                "Veneranda Vieira",
                 26,
-                "987.654.321-01",
+                "987.654.321-09",
                 "veneranda@empresa.com.br",
-                "(16) 91234-5678",
+                "(36) 91234-5678",
                 "F0123",
                 "Assistente Financeiro",
                 3500.00,
@@ -82,6 +91,17 @@ public class Main {
         func1.salarioBase = 3500.00;
         func1.departamento = "Gerência Financeira";
         func1.dataAdmissao = new Date();
+//        func1.nome = "Veneranda Vieira";
+//        func1.idade = 26;
+//        func1.cpf = "987.654.321-09";
+//        func1.email = "veneranda@empresa.com.br";
+//        func1.telefone = "(36) 91234-5678";
+//        //----//
+//        func1.matricula = "F0123";
+//        func1.cargo = "Assistente Financeiro";
+//        func1.salarioBase = 3500.00;
+//        func1.departamento = "Gerência Financeira";
+//        func1.dataAdmissao = new Date();
 
         // Exibindo os dados do funcionário
         System.out.println(func1.exibirDados());
@@ -102,14 +122,46 @@ public class Main {
 
     public static void teste02() {
 
-        System.out.println("%".repeat(80));
+//        System.out.println("%".repeat(80));
+//
+//        Pessoa p = new Pessoa();
+//        System.out.println("Exibindo dados de uma pessoa...");
+//        System.out.println(p.exibirDados());
+//
+//        Funcionario f = new Funcionario();
+//        System.out.println("Exibindo dados de um funcionário...");
+//        System.out.println(f.exibirDados());
+    }
 
-        Pessoa p = new Pessoa();
-        System.out.println("Exibindo dados de uma pessoa...");
-        System.out.println(p.exibirDados());
+    public static void teste03() {
 
-        Funcionario f = new Funcionario();
-        System.out.println("Exibindo dados de um funcionário...");
-        System.out.println(f.exibirDados());
+        System.out.println("===== CONTAS ESPECIAIS =====");
+
+        ContaEspecial c1 = new ContaEspecial("Ana", 1000.0, 500.0);
+        ContaEspecial c2 = new ContaEspecial("Bruno", 2000.0, 1000.0);
+        ContaEspecial c3 = new ContaEspecial("Clara", 1500.0, 800.0);
+
+        // Operações
+        c1.depositar(200.0);
+        c1.sacar(300.0);
+
+        c2.depositar(500.0);
+        c2.sacar(2500.0);
+
+        c3.depositar(1000.0);
+        c3.sacar(700.0);
+
+        // Exibir
+        System.out.println("---- Conta 1 ----");
+        c1.exibirSaldo();
+        c1.exibirSaldoReal();
+
+        System.out.println("---- Conta 2 ----");
+        c2.exibirSaldo();
+        c2.exibirSaldoReal();
+
+        System.out.println("---- Conta 3 ----");
+        c3.exibirSaldo();
+        c3.exibirSaldoReal();
     }
 }
