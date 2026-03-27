@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-03-25" agent="5.0" version="1.0" type="device">
+  <diagram name="Diagrama de Classes - Contas Bancárias" id="c4acf3e9-155e-7222-9cf6-157b1b27801">
+    <mxGraphModel dx="1200" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Classe Pessoa -->
+        <mxCell id="pessoa" value="Pessoa" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="200" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="pessoa_att" value="nome: String&#xa;idade: Integer&#xa;cpf: String&#xa;email: String&#xa;telefone: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="pessoa">
+          <mxGeometry y="26" width="200" height="84" as="geometry"/>
+        </mxCell>
+        <mxCell id="pessoa_sep" value="" style="line;strokeColor=#cccccc;strokeWidth=1;html=1;" vertex="1" parent="pessoa">
+          <mxGeometry y="110" width="200" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="pessoa_met" value="apresentar()&#xa;fazerAniversario()&#xa;atualizarEmail()&#xa;exibirDados()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="pessoa">
+          <mxGeometry y="111" width="200" height="69" as="geometry"/>
+        </mxCell>
+
+        <!-- Classe Funcionario -->
+        <mxCell id="funcionario" value="Funcionario" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="200" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="funcionario_att" value="matricula: String&#xa;cargo: String&#xa;salario: Double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="funcionario">
+          <mxGeometry y="26" width="200" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="funcionario_sep" value="" style="line;strokeColor=#cccccc;strokeWidth=1;html=1;" vertex="1" parent="funcionario">
+          <mxGeometry y="80" width="200" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="funcionario_met" value="exibirDados()&#xa;aumentarSalario()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="funcionario">
+          <mxGeometry y="81" width="200" height="59" as="geometry"/>
+        </mxCell>
+
+        <!-- Herança: Funcionario extends Pessoa -->
+        <mxCell id="heranca1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=0;dashPattern=1 4;endArrow=block;endFill=0;" edge="1" parent="1" source="funcionario" target="pessoa">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Classe ContaBancaria -->
+        <mxCell id="conta" value="ContaBancaria" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="220" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="conta_att" value="saldo: Double&#xa;titular: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="conta">
+          <mxGeometry y="26" width="220" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="conta_sep" value="" style="line;strokeColor=#cccccc;strokeWidth=1;html=1;" vertex="1" parent="conta">
+          <mxGeometry y="80" width="220" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="conta_met" value="depositar(Double)&#xa;sacar(Double)&#xa;exibirSaldo()&#xa;getSaldo()&#xa;getTitular()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="conta">
+          <mxGeometry y="81" width="220" height="99" as="geometry"/>
+        </mxCell>
+
+        <!-- Classe ContaEspecial -->
+        <mxCell id="contaesp" value="ContaEspecial" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="250" width="220" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="contaesp_att" value="limite: Double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="contaesp">
+          <mxGeometry y="26" width="220" height="34" as="geometry"/>
+        </mxCell>
+        <mxCell id="contaesp_sep" value="" style="line;strokeColor=#cccccc;strokeWidth=1;html=1;" vertex="1" parent="contaesp">
+          <mxGeometry y="60" width="220" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="contaesp_met" value="sacar(Double)&#xa;getLimite()&#xa;setLimite(Double)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="contaesp">
+          <mxGeometry y="61" width="220" height="79" as="geometry"/>
+        </mxCell>
+
+        <!-- Herança: ContaEspecial extends ContaBancaria -->
+        <mxCell id="heranca2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=0;dashPattern=1 4;endArrow=block;endFill=0;" edge="1" parent="1" source="contaesp" target="conta">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

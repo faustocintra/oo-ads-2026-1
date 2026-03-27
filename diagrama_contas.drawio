@@ -1,0 +1,87 @@
+{
+  "format": "mxfile",
+  "formatVersion": 1.1,
+  "libs": ["general", "uml"],
+  "pages": [
+    {
+      "id": 0,
+      "name": "Diagrama de Classes - Contas Bancárias",
+      "mxGraphModel": {
+        "gridSize": 10,
+        "guides": false,
+        "tooltips": true,
+        "connect": true,
+        "arrows": true,
+        "fold": true,
+        "page": true,
+        "pageScale": 1,
+        "pageWidth": 827,
+        "pageHeight": 1169,
+        "background": "#ffffff",
+        "darkOpacity": 0.2,
+        "defaultParent": 1,
+        "root": [
+          {"id": 0},
+          {
+            "id": 1,
+            "mxCell": true,
+            "parent": 0,
+            "style": "swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;backgroundColor=#ffffff;startSize=26;horizontalStack=0;",
+            "vertex": true,
+            "geometry": {"x": 20, "y": 20, "width": 300, "height": 200}
+          },
+          {
+            "id": 2,
+            "mxCell": true,
+            "parent": 1,
+            "style": "text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=16;",
+            "vertex": true,
+            "geometry": {"x": 0, "y": 26, "width": 300, "height": 26, "relative": 1, "as": "geometry"}
+          },
+          {
+            "id": 3,
+            "value": "ContaBancaria",
+            "mxCell": true,
+            "parent": 2,
+            "style": "text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;",
+            "vertex": true,
+            "geometry": {"width": 1, "height": 1, "relative": 1, "as": "geometry"}
+          },
+          {
+            "id": 4,
+            "mxCell": true,
+            "parent": 1,
+            "style": "line;strokeColor=#cccccc;strokeWidth=1;html=1;",
+            "vertex": true,
+            "geometry": {"x": 0, "y": 52, "width": 300, "height": 1, "relative": 1, "as": "geometry"}
+          },
+          {
+            "id": 5,
+            "mxCell": true,
+            "parent": 1,
+            "style": "text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;",
+            "vertex": true,
+            "geometry": {"x": 0, "y": 52, "width": 300, "height": 26, "relative": 1, "as": "geometry"}
+          },
+          {
+            "id": 6,
+            "value": "- saldo: Double",
+            "mxCell": true,
+            "parent": 5,
+            "style": "text;strokeColor=none;fillColor=none;",
+            "vertex": true,
+            "geometry": {"width": 1, "height": 1, "relative": 1, "as": "geometry"}
+          },
+          {
+            "id": 7,
+            "mxCell": true,
+            "parent": 1,
+            "style": "line;strokeColor=#cccccc;strokeWidth=1;html=1;",
+            "vertex": true,
+            "geometry": {"x": 0, "y": 78, "width": 300, "height": 1, "relative": 1, "as": "geometry"}
+          }
+        ]
+      }
+    }
+  ]
+}
