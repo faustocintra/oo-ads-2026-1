@@ -8,15 +8,15 @@ public class Main {
     }
 
     public static void teste01() {
-        System.out.println("=== TESTE 01: PESSOA ===\n");
+        System.out.println("TESTE 01: PESSOA\n");
 
         Pessoa pessoa1 = new Pessoa();
 
         pessoa1.nome = "Gervásio Gomes Garcia";
         pessoa1.idade = 54;
-        pessoa1.cpf = "123.456.789-01";
+        pessoa1.cpf = "123.456.779-01";
         pessoa1.email = "gervasio.garcia@empresa.com.br";
-        pessoa1.telefone = "(16) 98765-4321";
+        pessoa1.telefone = "(16)98765-4321";
 
         System.out.println(pessoa1.exibirDados());
 
@@ -49,7 +49,7 @@ public class Main {
                 35,
                 "987.654.321-00",
                 "joao.silva@empresa.com.br",
-                "(16) 99999-8888",
+                "(16)99999-8888",
                 "F001",
                 "Gerente",
                 3000.0,
@@ -77,13 +77,13 @@ public class Main {
     }
 
     public static void teste03() {
-        System.out.println("=== TESTE 03: CONTAS BANCÁRIAS ===\n");
+        System.out.println("TESTE 03: CONTAS BANCÁRIAS\n");
 
         ContaBancaria conta1 = new ContaBancaria("Alice", 1000.0);
         ContaBancaria conta2 = new ContaBancaria("Bob", 500.0);
         ContaBancaria conta3 = new ContaBancaria("Carlos", 2000.0);
 
-        System.out.println("--- Contas Bancárias Normais ---\n");
+        System.out.println("Contas Bancárias Normais\n");
 
         System.out.println("Conta de " + conta1.getTitular() + ":");
         conta1.exibirSaldo();
@@ -113,7 +113,7 @@ public class Main {
         ContaEspecial contaEsp2 = new ContaEspecial("Éverson", 800.0, 1000.0);
         ContaEspecial contaEsp3 = new ContaEspecial("Fernanda", 2500.0, 2000.0);
 
-        System.out.println("--- Contas Especiais ---\n");
+        System.out.println("Contas Especiais\n");
 
         System.out.println("Conta Especial de " + contaEsp1.getTitular() + ":");
         contaEsp1.exibirSaldo();
