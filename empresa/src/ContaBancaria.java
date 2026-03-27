@@ -25,7 +25,7 @@ public class ContaBancaria {
         System.out.println("Titular: " + titular);
         System.out.println("Saldo Atual:R$ " + saldo);
     }
-    // Getter (necessário para a classe filha)
+    // Getter (necessário para a classe filha);
     public Double getSaldo() {
         return saldo;
     }

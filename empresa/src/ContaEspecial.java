@@ -7,7 +7,7 @@ public class ContaEspecial extends ContaBancaria {
             Double saldoInicial,
             Double limite
     ){
-        super(titular,saldoInicial); //chama construtor da classe pai
+        super(titular,saldoInicial); //chama construtor da classe pai;
         this.limite = limite;
     }
     @Override
