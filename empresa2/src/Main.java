@@ -5,7 +5,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         //teste01();
-        //teste02();
+        //teste02();;
         teste03();
     }
 
@@ -105,6 +105,7 @@ public class Main {
 //        System.out.println(f.exibirDados());
 //    }
     public static void teste03() {
+        //;
         ContaBancaria c1 = new ContaBancaria("Assuel", 1000.0);
         ContaBancaria c2 = new ContaBancaria("Maria", 500.0);
         ContaBancaria c3 = new ContaBancaria("João", 200.0);
@@ -117,7 +118,7 @@ public class Main {
         c2.exibirSaldo();
         c3.exibirSaldo();
 
-        // Contas especiais
+        // Contas especiais;
         ContaEspecial ce1 = new ContaEspecial("Ana", 1000.0, 500.0);
         ContaEspecial ce2 = new ContaEspecial("Carlos", 800.0, 300.0);
         ContaEspecial ce3 = new ContaEspecial("Pedro", 600.0, 200.0);

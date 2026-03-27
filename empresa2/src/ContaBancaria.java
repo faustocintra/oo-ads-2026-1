@@ -1,9 +1,9 @@
 public class ContaBancaria {
-
+//;
         private Double saldo;
         private String titular;
 
-        // Construtor
+        // Construtor;
         public ContaBancaria(String titular, Double saldoInicial) {
             this.titular = titular;
             this.saldo = saldoInicial;
