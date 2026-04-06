@@ -4,8 +4,9 @@ import java.util.Date;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        teste01();
-        teste02();
+        //teste01();
+        //teste02();
+        teste03();
     }
 
     public static void teste01() {
@@ -111,5 +112,55 @@ public class Main {
 //        Funcionario f = new Funcionario();
 //        System.out.println("Exibindo dados de um funcionário...");
 //        System.out.println(f.exibirDados());
+    }
+
+    public static void teste03() {
+        ContaBancaria c1 = new ContaBancaria("Adamastor Asdrúbal", 300.00);
+        ContaBancaria c2 = new ContaBancaria("Marieta Moraes", 450.00);
+        ContaBancaria c3 = new ContaBancaria("Pedrolino Pereira", 280.00);
+
+        c1.depositar(150.00);
+        c2.depositar(78.00);
+        c3.depositar(110.00);
+
+        c1.sacar(70.00);
+        c2.sacar(150.00);
+        c3.sacar(44.00);
+
+        c1.exibirSaldo();
+        c2.exibirSaldo();
+        c3.exibirSaldo();
+
+        System.out.println("*".repeat(80));
+
+        ContaEspecial ce1 = new ContaEspecial("Bertolino Borges", 500.00, 2000.00);
+        ContaEspecial ce2 = new ContaEspecial("Jeruza Junqueira", 800.00, 1500.00);
+        ContaEspecial ce3 = new ContaEspecial("Orozina Oliveira", 1000.00, 1000.00);
+
+        ce1.exibirSaldo();
+        ce1.exibirSaldoReal();
+
+        ce2.exibirSaldo();
+        ce2.exibirSaldoReal();
+
+        ce3.exibirSaldo();
+        ce3.exibirSaldoReal();
+
+        ce1.depositar(200.00);
+        ce2.depositar(250.00);
+        ce3.depositar(150.00);
+
+        ce1.sacar(800.00);
+        ce2.sacar(2000.00);
+        ce3.sacar(1100.00);
+
+        ce1.exibirSaldo();
+        ce1.exibirSaldoReal();
+
+        ce2.exibirSaldo();
+        ce2.exibirSaldoReal();
+
+        ce3.exibirSaldo();
+        ce3.exibirSaldoReal();
     }
 }
