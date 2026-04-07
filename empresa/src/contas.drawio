@@ -1,28 +1,36 @@
-<mxfile host="drawio-plugin" modified="2026-03-25T00:10:55.352Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="jBtt_CpAtGBY_XAAyXaB" version="22.1.22" type="embed">
+<mxfile host="drawio-plugin" modified="2026-03-31T13:02:05.490Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" etag="YwRgS_VDZxN9S4VQcxZ-" version="22.1.22" type="embed">
   <diagram id="23iRSUPoRavnBvh4doch" name="Page-1">
-    <mxGraphModel dx="676" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1044" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" value="ContaBancaria" style="text;html=1;strokeColor=#185FA5;fillColor=#B5D4F4;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=14;fontStyle=1;fontColor=#0C447C;" vertex="1" parent="1">
-          <mxGeometry x="200" y="40" width="280" height="36" as="geometry" />
+        <mxCell id="2" value="ContaBancaria" style="text;html=1;strokeColor=#185FA5;fillColor=#B5D4F4;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=14;fontStyle=1;fontColor=#0C447C;" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="300" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="+ saldo : Double&#xa;+ titular : String" style="text;strokeColor=#185FA5;fillColor=#E6F1FB;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#0C447C;" vertex="1" parent="1">
-          <mxGeometry x="200" y="76" width="280" height="48" as="geometry" />
+        <mxCell id="3" value="+ saldo : Double&#xa;+ titular : String" style="text;strokeColor=#185FA5;fillColor=#E6F1FB;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#0C447C;" parent="1" vertex="1">
+          <mxGeometry x="200" y="76" width="300" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="+ ContaBancaria(titular : String, saldoInicial : Double)&#xa;+ depositar(quantia : Double) : void&#xa;+ sacar(quantia : Double) : void&#xa;+ exibirSaldo() : void" style="text;strokeColor=#185FA5;fillColor=#E6F1FB;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#185FA5;" vertex="1" parent="1">
-          <mxGeometry x="200" y="124" width="280" height="88" as="geometry" />
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480.2068965517242" y="124.10344827586209" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="5" value="ContaEspecial" style="text;html=1;strokeColor=#0F6E56;fillColor=#9FE1CB;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=14;fontStyle=1;fontColor=#085041;" vertex="1" parent="1">
-          <mxGeometry x="200" y="320" width="280" height="36" as="geometry" />
+        <mxCell id="4" value="+ ContaBancaria(titular : String, saldoInicial : Double)&#xa;+ depositar(quantia : Double) : void&#xa;+ sacar(quantia : Double) : void&#xa;+ exibirSaldo() : void" style="text;strokeColor=#185FA5;fillColor=#E6F1FB;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#185FA5;" parent="1" vertex="1">
+          <mxGeometry x="200" y="124" width="300" height="88" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="+ limite : Double" style="text;strokeColor=#0F6E56;fillColor=#E1F5EE;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#085041;" vertex="1" parent="1">
-          <mxGeometry x="200" y="356" width="280" height="32" as="geometry" />
+        <mxCell id="5" value="ContaEspecial" style="text;html=1;strokeColor=#0F6E56;fillColor=#9FE1CB;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=14;fontStyle=1;fontColor=#085041;" parent="1" vertex="1">
+          <mxGeometry x="210" y="320" width="280" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="+ ContaEspecial(titular : String, saldoInicial : Double, limite : Double)&#xa;+ exibirSaldo() : void  «override»&#xa;+ exibirSaldoReal() : void" style="text;strokeColor=#0F6E56;fillColor=#E1F5EE;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#0F6E56;" vertex="1" parent="1">
-          <mxGeometry x="200" y="388" width="280" height="72" as="geometry" />
+        <mxCell id="6" value="+ limite : Double" style="text;strokeColor=#0F6E56;fillColor=#E1F5EE;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#085041;" parent="1" vertex="1">
+          <mxGeometry x="210" y="356" width="280" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="&lt;&lt;extends&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;strokeColor=#185FA5;fontColor=#185FA5;fontSize=11;" edge="1" parent="1" source="5" target="2">
+        <mxCell id="7" value="+ ContaEspecial(titular : String, saldoInicial : Double, limite : Double)&#xa;+ exibirSaldo() : void  «override»&#xa;+ exibirSaldoReal() : void" style="text;strokeColor=#0F6E56;fillColor=#E1F5EE;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=12;fontColor=#0F6E56;" parent="1" vertex="1">
+          <mxGeometry x="210" y="388" width="280" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&lt;&lt;extends&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;strokeColor=#185FA5;fontColor=#185FA5;fontSize=11;" parent="1" source="5" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.182;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4" target="4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

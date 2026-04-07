@@ -3,9 +3,13 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-        //teste01();
-        //teste02();
-        teste03();
+        // Mantemos todas as chamadas antigas comentadas
+        // teste01();
+        // teste02();
+        // teste03();
+
+
+        prova1();
     }
 
     public static void teste01() {
@@ -45,71 +49,60 @@ public class Main {
     }
 
     public static void teste02() {
-        // System.out.println("\nExecutando Teste 02...\n");
+        // Código antigo comentado
     }
 
-    // contaBANCARIA
     public static void teste03() {
-        System.out.println("\n" + "=".repeat(20) + " CONTAS  " + "=".repeat(20));
-
-        /*
-        ContaBancaria conta = new ContaBancaria("AJAX", 1120.0);
-        conta.exibirSaldo();
-        conta.depositar(209.0);
-        conta.exibirSaldo();
-        conta.sacar(575.0);
-        conta.exibirSaldo();*/
-
+        /* MANTENDO HISTÓRICO DE CONTAS BANCÁRIAS
         ContaBancaria c1 = new ContaBancaria("Assuel", 1000.0);
         ContaBancaria c2 = new ContaBancaria("Bruna", 500.0);
         ContaBancaria c3 = new ContaBancaria("Carlão", 50.0);
+        // movimentações...
 
-        // 2. Realizando saques e depósitos
-        System.out.println("\n--- Movimentações ---");
-        c1.depositar(250.0);
-        c1.sacar(100.0);
-        c2.sacar(600.0);
-        c2.depositar(150.0);
-        c3.depositar(1000.0);
-        c3.sacar(200.0);
-
-        // 3. Exibindo o saldo final
-        c1.exibirSaldo();
-        c2.exibirSaldo();
-        c3.exibirSaldo();
-
-
-        // --- TRÊS CONTAS ESPECIAIS ---
-
-        // 1. contas especiais (Titular, Saldo Inicial, Limite)
         ContaEspecial ce1 = new ContaEspecial("Hobbes", 1000.0, 500.0);
         ContaEspecial ce2 = new ContaEspecial("Assis", 2000.0, 1000.0);
         ContaEspecial ce3 = new ContaEspecial("Nicolau", 500.0, 2000.0);
+        // movimentações...
+        */
+    }
 
-        // 2. Realizando saques e depósitos
-        System.out.println("\n--- Movimentações (Especiais) ---");
-        ce1.depositar(300.0);
-        ce1.sacar(150.0);
+    public static void prova1() {
+        System.out.println("=".repeat(50));
+        System.out.println("          RESULTADO DOS ESTUDANTES");
+        System.out.println("=".repeat(50));
 
-        ce2.sacar(500.0);
-        ce2.depositar(100.0);
+        // ── Estudante 1 ──────────────────────────────────────
+        Estudante e1 = new Estudante("Ana Beatriz Lima", "111.222.333-44",
+                "Engenharia de Software");
+        e1.setNotaBimestre1(8.5);
+        e1.setNotaBimestre2(7.0);
 
-        ce3.depositar(1000.0);
-        ce3.sacar(200.0);
+        // ── Estudante 2 ──────────────────────────────────────
+        Estudante e2 = new Estudante("Carlos Eduardo Mendes", ,
+                "Sistemas de Informação");
+        e2.setNotaBimestre1(4.0);
+        e2.setNotaBimestre2(5.5);
 
-        // 3. Exibindo Saldos Real e com Limite
-        System.out.println("\n--- Resultados Finais ---");
+        // ── Estudante 3 ──────────────────────────────────────
+        Estudante e3 = new Estudante("Fernanda Costa Rocha",
+                "Ciência da Computação");
+        e3.setNotaBimestre1(9.0);
+        e3.setNotaBimestre2(9.5);
 
-        System.out.println("[Conta 01]");
-        ce1.exibirSaldoReal();
-        ce1.exibirSaldo();
+        // ── Estudante 4 – seu nome ───────────────────────────
+        Estudante e4 = new Estudante("Samuel Pereira de Souza", "444.555.666-77",
+                "Análise e Desenvolvimento de Sistemas");
+        e4.setNotaBimestre1(6.0);
+        e4.setNotaBimestre2(7.5);
 
-        System.out.println("\n[Conta 02]");
-        ce2.exibirSaldoReal();
-        ce2.exibirSaldo();
+        // ── Exibindo dados dos quatro ────────────────────────
+        Estudante[] estudantes = {e1, e2, e3, e4};
 
-        System.out.println("\n[Conta 03]");
-        ce3.exibirSaldoReal();
-        ce3.exibirSaldo();
+        for (Estudante e : estudantes) {
+            System.out.println("-".repeat(50));
+            e.exibirDados();
+        }
+
+        System.out.println("=".repeat(50));
     }
 }
