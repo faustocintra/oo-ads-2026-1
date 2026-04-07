@@ -18,7 +18,7 @@ public class Estudante extends Pessoa {
         return (calcularMedia() >= 6.0) ? "APROVADO" : "REPROVADO";
     }
 
-    // Ajustado para os nomes que você usou na Main
+
     public void setNotaBimestre1(double nota) { this.nota1 = nota; }
     public void setNotaBimestre2(double nota) { this.nota2 = nota; }
 
