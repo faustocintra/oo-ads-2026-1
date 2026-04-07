@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
        // teste01();;
         //teste02();
-        teste03();
+       // teste03();
+         prova1();
     }
 
 //    public static void teste01() {
@@ -113,59 +114,91 @@ public class Main {
 //        System.out.println("Exibindo dados de um funcionário...");
 //        System.out.println(f.exibirDados());
 //    }
-    public static void teste03(){
-        // Criando três contas bancárias;
-        ContaBancaria conta1 = new ContaBancaria("Lissa", 1000.0);
-        ContaBancaria conta2 = new ContaBancaria("Jimin", 2000.0);
-        ContaBancaria conta3 = new ContaBancaria("Austin", 5000.0);
+//    public static void teste03(){
+//        // Criando três contas bancárias;
+//        ContaBancaria conta1 = new ContaBancaria("Lissa", 1000.0);
+//        ContaBancaria conta2 = new ContaBancaria("Jimin", 2000.0);
+//        ContaBancaria conta3 = new ContaBancaria("Austin", 5000.0);
+//
+//        // Operações na conta 1;
+//        conta1.depositar(200.0);
+//        conta1.sacar(150.0);
+//
+//        // Operações na conta 2;
+//        conta2.depositar(300.0);
+//        conta2.sacar(100.0);
+//
+//        // Operações na conta 3;
+//        conta3.sacar(500.0);
+//        conta3.depositar(1000.0);
+//
+//        // Exibindo saldo final de cada conta;
+//        System.out.println("\n--- Conta 1 ---");
+//        conta1.exibirSaldo();
+//
+//        System.out.println("\n--- Conta 2 ---");
+//        conta2.exibirSaldo();
+//
+//        System.out.println("\n--- Conta 3---");
+//        conta3.exibirSaldo();
+//
+//        //criando contas especiais;
+//        ContaEspecial contaE1  = new ContaEspecial("Damon",1000.0, 500.0);
+//        ContaEspecial contaE2 = new ContaEspecial("Taeyhung",2000.0, 500.0);
+//        ContaEspecial contaE3 = new ContaEspecial("Ally",5000.0, 450.0);
+//        //operações da conta1;
+//        contaE1.depositar(200.0);
+//        contaE1.sacar(100.0);
+//        //operações da conta2;
+//        contaE2.depositar(250.0);
+//        contaE2.sacar(100.0);
+//        //operações da conta3;
+//        contaE3.depositar(300.0);
+//        contaE3.sacar(160.0);
+//
+//        //Exibir resultados;
+//        System.out.println("\n--- Conta Especial 1 ---");
+//        contaE1.exibirSaldoReal();
+//        contaE1.exibirSaldo();
+//
+//
+//        System.out.println("\n--- Conta Especial 2 ---");
+//        contaE2.exibirSaldoReal();
+//        contaE2.exibirSaldo();
+//
+//        System.out.println("\n--- Conta Especial 3 ---");
+//        contaE3.exibirSaldoReal();
+//        contaE3.exibirSaldo();
+//    }
+//}
+public static void prova1(){
+    //Criação dos estudantes
+    //Estudante 1
+    Estudante e1 = new Estudante("Austin Moon", 22, "111.222.333-44","austin@email.com", "(16) 99111-1111", "Engenharia Civil");
+    e1.notaPrimeiroBimestre = 7.0;
+    e1.notaSegundoBimestre = 5.0;
+    //Estudante 2
+    Estudante e2 = new Estudante("Larissa Silva", 20, "222.333.444-55", "larija@email.com", "(16) 99222-2222", "Administração");
+    e2.notaPrimeiroBimestre = 9.0;
+    e2.notaSegundoBimestre = 8.0;
+    //Estudante 3
+    Estudante e3 = new Estudante("Ally Dolson", 24, "333.444.555-66", "ally@email.com", "(16) 99333-3333", "Direito");
+    e3.notaPrimeiroBimestre = 3.0;
+    e3.notaSegundoBimestre = 5.0;
+    //Estudante 4
+    Estudante e4= new Estudante("Rafaela Lissa Maciel Da Silva", 20,"444.666.777.99","rafaela@email.com",
+            "(16) 99345-4566", "Analise e Desenvolvimento de Sistemas");
+    e4.notaPrimeiroBimestre = 9.0;
+    e4.notaSegundoBimestre = 7.5;
 
-        // Operações na conta 1;
-        conta1.depositar(200.0);
-        conta1.sacar(150.0);
-
-        // Operações na conta 2;
-        conta2.depositar(300.0);
-        conta2.sacar(100.0);
-
-        // Operações na conta 3;
-        conta3.sacar(500.0);
-        conta3.depositar(1000.0);
-
-        // Exibindo saldo final de cada conta;
-        System.out.println("\n--- Conta 1 ---");
-        conta1.exibirSaldo();
-
-        System.out.println("\n--- Conta 2 ---");
-        conta2.exibirSaldo();
-
-        System.out.println("\n--- Conta 3---");
-        conta3.exibirSaldo();
-
-        //criando contas especiais;
-        ContaEspecial contaE1  = new ContaEspecial("Lissa",1000.0, 500.0);
-        ContaEspecial contaE2 = new ContaEspecial("Jimin",2000.0, 500.0);
-        ContaEspecial contaE3 = new ContaEspecial("Austin",5000.0, 450.0);
-        //operações da conta1;
-        contaE1.depositar(200.0);
-        contaE1.sacar(100.0);
-        //operações da conta2;
-        contaE2.depositar(250.0);
-        contaE2.sacar(100.0);
-        //operações da conta3;
-        contaE3.depositar(300.0);
-        contaE3.sacar(160.0);
-
-        //Exibir resultados;
-        System.out.println("\n--- Conta Especial 1 ---");
-        contaE1.exibirSaldoReal();
-        contaE1.exibirSaldo();
-
-        System.out.println("\n--- Conta Especial 2 ---");
-        contaE2.exibirSaldoReal();
-        contaE2.exibirSaldo();
-
-        System.out.println("\n--- Conta Especial 3 ---");
-        contaE3.exibirSaldoReal();
-        contaE3.exibirSaldo();
-    }
+    // Exibindo os dados dos estudantes
+    System.out.println("\n--- Estudante 1 ---");
+    System.out.println(e1.exibirDados());
+    System.out.println("\n--- Estudante 2 ---");
+    System.out.println(e2.exibirDados());
+    System.out.println("\n--- Estudante 3 ---");
+    System.out.println(e3.exibirDados());
+    System.out.println("\n--- Estudante 4 ---");
+    System.out.println(e4.exibirDados());
+  }
 }
