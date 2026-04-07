@@ -3,8 +3,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-
-        teste03();
+        prova1();
     }
 
     public static void teste01() {
@@ -136,7 +135,7 @@ public class Main {
         contaEsp2.exibirSaldoReal();
 
         System.out.println("\n" + "-".repeat(80) + "\n");
-        
+
         System.out.println("Conta Especial de " + contaEsp3.getTitular() + ":");
         contaEsp3.exibirSaldo();
         contaEsp3.depositar(1500.0);
@@ -148,5 +147,62 @@ public class Main {
 
         System.out.println("\n" + "-".repeat(80));
         System.out.println("FIM DO TESTE");
+    }
+
+    public static void prova1() {
+        System.out.println("PROVA 1\n");
+
+        Estudante est1 = new Estudante("Educação Física");
+        est1.nome = "Juan Tasso";
+        est1.idade = 18;
+        est1.cpf = "111.222.333-44";
+        est1.email = "juantasso200@escola.com";
+        est1.telefone = "(11)91111-1111";
+        est1.nota1Bimestre = 4.5;
+        est1.nota2Bimestre = 5.0;
+
+        Estudante est2 = new Estudante("Design de Games");
+        est2.nome = "Gabriel Campos";
+        est2.idade = 21;
+        est2.cpf = "999.888.777-66";
+        est2.email = "epic.rpg@discord.com";
+        est2.telefone = "(16)92222-2222";
+        est2.nota1Bimestre = 8.0;
+        est2.nota2Bimestre = 7.5;
+
+        Estudante est3 = new Estudante("Administração");
+        est3.nome = "Fernanda Souza";
+        est3.idade = 22;
+        est3.cpf = "555.444.333-22";
+        est3.email = "fernanda.adm@escola.com";
+        est3.telefone = "(16)93333-3333";
+        est3.nota1Bimestre = 6.0;
+        est3.nota2Bimestre = 6.0;
+
+        Estudante est4 = new Estudante("Análise e Desenvolvimento de Sistemas");
+        est4.nome = "Raphael Marcelo Campos Vieira";
+        est4.idade = 21;
+        est4.cpf = "473.478.298-59";
+        est4.email = "raphael.vieira@fatec.edu.br";
+        est4.telefone = "(16)94444-4444";
+        est4.nota1Bimestre = 9.0;
+        est4.nota2Bimestre = 9.5;
+
+        System.out.println("Dados do estudante:  1:");
+        System.out.println(est1.exibirDados());
+        System.out.println("\n");
+
+        System.out.println("Dados do estudante:  2:");
+        System.out.println(est2.exibirDados());
+        System.out.println("\n");
+
+        System.out.println("Dados do estudante:  3:");
+        System.out.println(est3.exibirDados());
+        System.out.println("\n");
+
+        System.out.println("Dados do estudante: 4:");
+        System.out.println(est4.exibirDados());
+
+        System.out.println("\nFIM DA PROVA 1");
     }
 }
