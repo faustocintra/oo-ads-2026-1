@@ -8,6 +8,7 @@ public class Main {
         teste01();
         teste02();
         teste03();
+        teste04();
     }
 
     public static void teste01() {
@@ -163,5 +164,24 @@ public class Main {
         System.out.println("---- Conta 3 ----");
         c3.exibirSaldo();
         c3.exibirSaldoReal();
+    }
+
+    public static void teste04() {
+
+        System.out.println("===== Teste 04 =====");
+
+        String curso = "Análise e Desenvolvimento de Sistemas";
+        double nota1 = 9.0;
+        double nota2 = 8.0;
+
+        double media = (nota1 + nota2) / 2;
+
+        System.out.printf("Média: %.2f\n", media);
+
+        if (media >= 6) {
+            System.out.println("Aprovado");
+        } else {
+            System.out.println("Reprovado");
+        }
     }
 }
