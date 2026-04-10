@@ -1,22 +1,32 @@
 public class ContaBancaria {
 
     // Atributos
-    Double saldo;
-    String titular;
+    // Protected: apenas classes do mesmo pacote têm acesso
+    protected Double saldo;
+    public String titular;
 
     // Construtor personalizado
     public ContaBancaria(String titular, Double saldoInicial) {
         this.titular = titular;
-        this.saldo = saldoInicial;
+        //this.saldo = saldoInicial;
+        // Chama depositar() para ajustar o saldo inicial da conta,
+        // passando pela validação existente no método
+        this.depositar(saldoInicial);
     }
 
     // Métodos
     public void depositar(Double quantia) {
+        if(quantia <= 0) {
+            throw new IllegalArgumentException("Valor de depósito deve ser positivo.");
+        }
         this.saldo += quantia;
         System.out.println("O valor R$ " + quantia + " foi depositado.");
     }
 
     public void sacar(Double quantia) {
+        if(quantia > this.saldo) {
+            throw new IllegalArgumentException("Saldo insuficiente para realizar o saque.");
+        }
         this.saldo -= quantia;
         System.out.println("O valor R$ " + quantia + " foi sacado.");
     }

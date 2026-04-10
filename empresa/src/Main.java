@@ -6,7 +6,9 @@ public class Main {
     public static void main(String[] args) {
         //teste01();
         //teste02();
-        teste03();
+        //teste03();
+        //prova01();
+        teste04();
     }
 
     public static void teste01() {
@@ -162,5 +164,87 @@ public class Main {
 
         ce3.exibirSaldo();
         ce3.exibirSaldoReal();
+    }
+
+    public static void prova01() {
+        Estudante e1 = new Estudante(
+                "Adamastor Alves",
+                20,
+                "111.111.111-11",
+                "adamastor@faculdade.edu.br",
+                "(16) 91111-1111",
+                "Administração"
+        );
+
+        Estudante e2 = new Estudante(
+                "Belisa Borges",
+                19,
+                "222.222.222-22",
+                "belisa@faculdade.edu.br",
+                "(16) 92222-2222",
+                "Biomedicina"
+        );
+
+        Estudante e3 = new Estudante(
+                "Cosme Cordeiro",
+                18,
+                "333.333.333-33",
+                "cosme@faculdade.edu.br",
+                "(16) 93333-3333",
+                "Ciências Contábeis"
+        );
+
+        Estudante e4 = new Estudante(
+                "Deusdete Duarte",
+                21,
+                "444.444.444-44",
+                "deusdete@faculdade.edu.br",
+                "(16) 94444-4444",
+                "Direito"
+        );
+
+        e1.nota1Bim = 8.5;
+        e1.nota2Bim = 6.0;
+
+        e2.nota1Bim = 5.6;
+        e2.nota2Bim = 4.3;
+
+        e3.nota1Bim = 10.0;
+        e3.nota2Bim = 8.2;
+
+        e4.nota1Bim = 7.0;
+        e4.nota2Bim = 4.6;
+
+        System.out.println(e1.exibirDados());
+        System.out.println("-".repeat(80));
+
+        System.out.println(e2.exibirDados());
+        System.out.println("-".repeat(80));
+
+        System.out.println(e3.exibirDados());
+        System.out.println("-".repeat(80));
+
+        System.out.println(e4.exibirDados());
+        System.out.println("-".repeat(80));
+    }
+
+    public static void teste04() {
+        ContaBancaria c1 = new ContaBancaria("Zeferino Zacarias", 500.00);
+        c1.exibirSaldo();
+
+        c1.sacar(350.00);
+        c1.exibirSaldo();
+
+        // Atributo "saldo" foi privatizado
+        // Mudanças no saldo agora só podem ser feitas por meio dos
+        // métodos depositar() e sacar()
+        //c1.saldo = -100.00;
+        //c1.exibirSaldo();
+
+        c1.depositar(200.00);
+        c1.exibirSaldo();
+
+        ContaBancaria c2 = new ContaBancaria("Yuri Yamashita", -850.00);
+        c2.exibirSaldo();
     }
 }
