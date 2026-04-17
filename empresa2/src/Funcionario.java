@@ -1,6 +1,6 @@
  public class Funcionario {
 
-    // atributos
+    /// atributos
     private String nome;
     private String cpf;
     private Double salarioBase;

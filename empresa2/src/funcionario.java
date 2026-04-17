@@ -1,51 +1,48 @@
-//import java.util.Date;
-//
-//
-//public class Funcionario extends Pessoa {
-//
-//
-//    public static Double taxaComissao = 10.0;
-//
-//
-//    // Atributos
-//    public String matricula;
-//    public String cargo;
-//    public Double salarioBase;
-//    public String departamento;
-//    public Date dataAdmissao;
-//
-//
-//    // Métodos
-//    public Double calcularSalario() {
-//        return this.salarioBase * (1 + (taxaComissao / 100));
-//    }
-//
-//
-//    public void aumentarSalarioBase(Double percentual) {
-//        if(percentual == null || percentual <= 0) {
-//            throw new IllegalArgumentException("O percentual de aumento deve ser positivo.");
-//        }
-//        this.salarioBase = this.salarioBase * (1 + (percentual / 100));
-//        System.out.println("Salário base atualizado para R$ " + this.salarioBase);
-//    }
-//
-//
-//    public void registrarPonto() {
-//        System.out.println("Ponto registrado para " + this.nome +
-//                "\nMatrícula: " + this.matricula +
-//                "\nData/hora:" + new Date()
-//        );
-//    }
-//
-//
-//    @Override
-//    public String exibirDados() {
-//        String dadosPessoa = super.exibirDados();
-//        return dadosPessoa +
-//                "\nMatricula: " + this.matricula +
-//                "\nCargo: " + this.cargo +
-//                "\nSalário base: R$ " + this.salarioBase +
-//                "\nDepartamento: " + this.departamento +
-//                "\nData de admissão: " + this.dataAdmissao;
-//    }
-//}
+ public class Funcionario {
+
+    /// atributos
+    private String nome;
+    private String cpf;
+    private Double salarioBase;
+
+    //construtor
+    public Funcionario(String nome, String cpf, Double salarioBase) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.salarioBase = salarioBase;
+    }
+
+    // getters e setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(Double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    // método para exibir dados
+    public void exibirDados() {
+        System.out.println("=== Dados do Funcionário ===");
+        System.out.println("Nome: " + nome);
+        System.out.println("CPF: " + cpf);
+        System.out.println("Salário Base: R$ " + salarioBase);
+    }
+}
+
