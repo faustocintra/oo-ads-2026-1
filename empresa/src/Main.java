@@ -50,7 +50,7 @@ public class Main {
 
         // Alterando novamente o e-mail por meio de manipulação direta
         // do valor do atributo
-        pessoa1.email = "garcia.gervasio@bol.com.br";
+        pessoa1.setEmail("garcia.gervasio@bol.com.br");
 
         System.out.println("-".repeat(80));  // Traço separador
 
@@ -203,17 +203,17 @@ public class Main {
                 "Direito"
         );
 
-        e1.nota1Bim = 8.5;
-        e1.nota2Bim = 6.0;
+        e1.setNota1Bim(8.5);
+        e1.setNota2Bim(6.0);
 
-        e2.nota1Bim = 5.6;
-        e2.nota2Bim = 4.3;
+        e2.setNota1Bim(5.6);
+        e2.setNota2Bim(4.3);
 
-        e3.nota1Bim = 10.0;
-        e3.nota2Bim = 8.2;
+        e3.setNota1Bim(10.0);
+        e3.setNota2Bim(8.2);
 
-        e4.nota1Bim = 7.0;
-        e4.nota2Bim = 4.6;
+        e4.setNota1Bim(7.0);
+        e4.setNota2Bim(4.6);
 
         System.out.println(e1.exibirDados());
         System.out.println("-".repeat(80));
