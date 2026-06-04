@@ -4,37 +4,7 @@ public class Main {
 
         /// teste03(); // comentado conforme solicitado
 
-        exemploContas();
-        System.out.println();
         prova1();
-    }
-
-    public static void exemploContas() {
-
-        Pessoa titular = new Pessoa(
-                "Mariana Souza",
-                22,
-                "555.555.555-55",
-                "mariana@email.com",
-                "(11) 99999-9999"
-        );
-
-        CestaTarifas cestaBasica = new CestaTarifas("Cesta Basica", 19.90, 5);
-        ContaEspecial contaEspecial = new ContaEspecial(titular, 500.0, 1000.0);
-        contaEspecial.setCestaTarifas(cestaBasica);
-
-        Clube clubeCliente = new Clube("Clube de Vantagens", 29.90);
-        clubeCliente.adicionarSocio(titular);
-
-        contaEspecial.depositar(250.0);
-        contaEspecial.sacar(100.0);
-
-        System.out.println("=== Exemplo Conta Especial ===");
-        titular.exibirDados();
-        contaEspecial.exibirSaldo();
-        contaEspecial.exibirSaldoReal();
-        cestaBasica.exibirCesta();
-        System.out.println("Socios no clube: " + clubeCliente.getSocios().size());
     }
 
     public static void prova1() {

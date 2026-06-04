@@ -5,7 +5,7 @@
     private String cpf;
     private Double salarioBase;
 
-    // construtor
+    //construtor
     public Funcionario(String nome, String cpf, Double salarioBase) {
         this.nome = nome;
         this.cpf = cpf;
